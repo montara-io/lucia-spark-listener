@@ -6,7 +6,7 @@ Lucia spark listener is collecting metrics from Spark Jobs and send them to Luci
 
 ## Usage
 
-1. Before running the job please setup Lucia on your environment (Local/Cloud) [for more information](https://github.com/montara-io/lucia-deployment)
+1. Before running your Spark job with Lucia listener, please setup Lucia on your environment (Local/Cloud) [for more information](https://github.com/montara-io/lucia-deployment)
 
 2. After your Lucia environment is runinng, you can start use Lucia listener
 
