@@ -31,6 +31,17 @@ lazy val agent = (project in file("agent"))
     organization := "io.montara.lucia",
     crossScalaVersions := Seq("2.11.12", "2.12.12"),
     libraryDependencies += "org.apache.spark" %% "spark-core" % "2.4.3" % "provided",
-    publishTo := sonatypePublishToBundle.value
+    githubOwner := "montara-io",
+    githubRepository := "luica-spark-listener",
+    publishTo := Some(
+      "GitHub montara-io Apache Maven Packages" at "https://maven.pkg.github.com/montara-io/lucia-spark-listener"
+    ),
+    publishMavenStyle := true,
+    credentials += Credentials(
+      "GitHub Package Registry",
+      "maven.pkg.github.com",
+      "montara-io",
+      System.getenv("GITHUB_TOKEN")
+    )
   )
   .settings(commonSettings: _*)
