@@ -37,8 +37,8 @@ Lucia spark listener is collecting metrics from Spark Jobs and send them to Luci
 ```
 
 spark-submit \
-  --packages io.montara.lucia.sparklistener_2:12:add-github-pacakges-SNAPSHOT \
-  --repositories https://maven.pkg.github.com/montara-io/lucia-spark-listener \
+  --packages io.github.montara-io:sparklistener_2.12:1.0.3 \
+  --repositories https://s01.oss.sonatype.org/content/repositories/snapshots \
   --conf spark.lucia.sparklistener.url=<endpoint>/events \
   --conf spark.lucia.sparklistener.pipelineId=<pipeline_id> \
   --conf spark.lucia.sparklistener.pipelineRunId=<pipeline_run_id> \
