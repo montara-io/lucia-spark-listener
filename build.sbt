@@ -28,9 +28,23 @@ lazy val common = (project in file("common"))
 lazy val agent = (project in file("agent"))
   .settings(
     name := "sparklistener",
-    organization := "io.montara.lucia",
+    organization := "io.github.montara-io",
     crossScalaVersions := Seq("2.11.12", "2.12.12"),
     libraryDependencies += "org.apache.spark" %% "spark-core" % "2.4.3" % "provided",
-    publishTo := sonatypePublishToBundle.value
+    publishTo := sonatypePublishToBundle.value,
+    licenses := Seq(
+      "APL2" -> url(
+        "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      )
+    ),
+    homepage := Some(url("https://github.com/montara-io")),
+    developers := List(
+      Developer(
+        id = "avivvegh",
+        name = "Aviv Vegh",
+        email = "avivvegh85@gmail.com",
+        url = url("https://github.com/montara-io")
+      )
+    )
   )
   .settings(commonSettings: _*)
